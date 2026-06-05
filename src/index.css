@@ -421,6 +421,63 @@ main {
   margin: 0;
 }
 
+.menu-category-grid,
+.menu-item-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.menu-category-grid {
+  grid-template-columns: 1fr;
+}
+
+.menu-category-card,
+.menu-item-card {
+  border: 1px solid rgba(78, 52, 46, 0.08);
+  border-radius: var(--radius);
+  background: rgba(255, 250, 247, 0.96);
+  box-shadow: var(--soft-shadow);
+}
+
+.menu-category-card {
+  min-height: 282px;
+  padding: 0 0 22px;
+  overflow: hidden;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-category-card:hover,
+.menu-category-card:focus-visible,
+.menu-item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.menu-category-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.menu-category-card span {
+  display: block;
+  padding: 18px 18px 0;
+  color: var(--primary);
+  font-family: Poppins, Inter, system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.menu-category-card p {
+  padding: 0 18px;
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .gallery-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
@@ -579,10 +636,72 @@ main {
   backdrop-filter: blur(8px);
 }
 
+.menu-dialog {
+  width: min(100%, 1060px);
+  max-height: min(88dvh, 860px);
+  overflow: auto;
+  border-radius: 14px;
+  padding: 20px;
+  background: var(--surface);
+  box-shadow: 0 30px 80px rgba(33, 22, 18, 0.32);
+}
+
+.menu-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.menu-dialog-header h2,
 .gallery-modal-copy h2 {
   color: var(--primary);
   font-size: clamp(1.7rem, 4vw, 2.65rem);
   line-height: 1.08;
+}
+
+.menu-dialog-header p {
+  max-width: 620px;
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.menu-item-grid {
+  grid-template-columns: 1fr;
+}
+
+.menu-item-card {
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-item-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--accent);
+}
+
+.menu-item-card div {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+}
+
+.menu-item-card h3 {
+  color: var(--primary);
+}
+
+.menu-item-card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.menu-item-card strong {
+  color: var(--secondary);
+  font-size: 1.08rem;
 }
 
 .community-gallery-section {
@@ -813,6 +932,10 @@ main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .menu-item-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .best-seller-grid,
   .community-gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -853,6 +976,10 @@ main {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .menu-category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -875,6 +1002,10 @@ main {
 
   .community-gallery-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .menu-item-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
 }
@@ -992,6 +1123,8 @@ main {
 
   .card-grid,
   .gallery-grid,
+  .menu-category-grid,
+  .menu-item-grid,
   .info-panel {
     gap: 16px;
   }
@@ -999,6 +1132,14 @@ main {
   .info-card,
   .contact-card {
     padding: 20px;
+  }
+
+  .menu-category-card {
+    min-height: auto;
+  }
+
+  .menu-category-card img {
+    height: 145px;
   }
 
   .best-seller-grid,
@@ -1024,10 +1165,23 @@ main {
     align-items: end;
   }
 
+  .menu-modal-backdrop {
+    align-items: center;
+  }
+
+  .menu-dialog,
   .gallery-modal {
     width: 100%;
     max-height: 92dvh;
     border-radius: 14px 14px 0 0;
+  }
+
+  .menu-dialog-header {
+    gap: 10px;
+  }
+
+  .menu-dialog-header .icon-button {
+    flex: 0 0 auto;
   }
 
   .gallery-filter {
@@ -1044,6 +1198,10 @@ main {
   .hero-content h1,
   .section-intro h1 {
     font-size: 1.85rem;
+  }
+
+  .menu-category-card span {
+    font-size: 1.08rem;
   }
 
 }
