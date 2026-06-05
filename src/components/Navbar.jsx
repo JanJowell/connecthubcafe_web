@@ -21,7 +21,7 @@ function Navbar() {
           <span className="brand-mark">
             <img src="/images/cafelogo.png" alt="" />
           </span>
-          Connect Hub Cafe
+          Connect Hub Cafes
         </NavLink>
 
         <div className="desktop-links">
