@@ -33,7 +33,7 @@ function Menu() {
         <span className="eyebrow">Cafe menu</span>
         <h1>Fresh Sips & Baked Comforts</h1>
         <p>Choose a category and jump into handcrafted favorites prepared for every kind of cafe day.</p>
-        <p>"So whether you eat or drink, or whatever you do, do it all for the glory of God." —1 Corinthians 10:31</p>
+        <p>"So whether you eat or drink, or whatever you do, do it all for the glory of God." - 1 Corinthians 10:31</p>
       </div>
 
       <div className="category-grid">

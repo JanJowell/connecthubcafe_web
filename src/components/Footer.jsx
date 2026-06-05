@@ -1,4 +1,4 @@
-import { Camera, Mail, MapPin, MessageCircle, Phone, Share2 } from 'lucide-react'
+import { Camera, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 
 function Footer() {
@@ -46,7 +46,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="footer-bottom">© 2022 Connecthub Cafe. All Rights Reserved.</div>
+      <div className="footer-bottom">Copyright 2022 Connecthub Cafe. All Rights Reserved.</div>
     </footer>
   )
 }
