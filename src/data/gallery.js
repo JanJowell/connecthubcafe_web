@@ -24,14 +24,14 @@ export const galleryItems = [
     id: 4,
     category: 'Drinks',
     caption: 'Refreshing drinks prepared for a busy afternoon.',
-    image: '//customer-gallery/customer4.jpg',
+    image: '/customer-gallery/customer4.jpg',
     uploadDate: '2026-05-21',
   },
   {
     id: 5,
     category: 'Pastries',
     caption: 'Fresh pastries shared with friends and coffee.',
-    image: '//customer-gallery/customer5.jpg',
+    image: '/customer-gallery/customer5.jpg',
     uploadDate: '2026-05-18',
   },
   {
