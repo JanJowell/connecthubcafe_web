@@ -62,13 +62,6 @@ export const galleryItems = [
     image: '/customer-gallery/customer9.jpg',
     uploadDate: '2026-04-22',
   },
-  {
-    id: 10,
-    category: 'Pastries',
-    caption: 'Sweet baked treats for slow mornings.',
-    image: '/customer-gallery/customer1.jpg',
-    uploadDate: '2026-04-16',
-  },
 ]
 
 export const galleryCategories = ['Cafe Moments', 'Customers', 'Events', 'Drinks', 'Pastries']
