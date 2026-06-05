@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" role="img" aria-labelledby="title">
+  <title id="title">Caramel frappe placeholder</title>
+  <rect width="800" height="640" fill="#d7ccc8"/>
+  <circle cx="168" cy="112" r="128" fill="#fffaf7" opacity=".38"/>
+  <circle cx="690" cy="552" r="190" fill="#4e342e" opacity=".18"/>
+  <g transform="translate(265 92)">
+    <path d="M77 166h262l-38 342H116z" fill="#fffaf7"/>
+    <path d="M112 198h190l-25 268H140z" fill="#b67b42"/>
+    <path d="M123 260c48 30 100 30 157 0l-9 82c-51 25-95 25-139 0z" fill="#6d4c41" opacity=".72"/>
+    <path d="M89 134c20-64 84-62 104-29 23-48 98-55 130 6 36 3 66 28 66 62H67c0-18 8-31 22-39z" fill="#fffaf7"/>
+    <rect x="57" y="158" width="344" height="52" rx="26" fill="#4e342e"/>
+    <path d="M157 0h36l-29 156h-36z" fill="#4e342e"/>
+  </g>
+</svg>
