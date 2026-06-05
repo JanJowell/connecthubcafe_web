@@ -1,3 +1,4 @@
+import GalleryGrid from '../components/GalleryGrid'
 import { communityPhotos } from '../data/communityData'
 
 function Community() {
@@ -16,6 +17,15 @@ function Community() {
             <img src={photo.image} alt={photo.title} />
           </article>
         ))}
+      </div>
+
+      <div className="community-gallery-section">
+        <div className="section-intro fade-in">
+          <span className="eyebrow">Community gallery</span>
+          <h1>Cafe Life in Frames</h1>
+          <p>Browse cafe moments, customers, events, drinks, and pastries from our Connecthub community.</p>
+        </div>
+        <GalleryGrid />
       </div>
     </section>
   )

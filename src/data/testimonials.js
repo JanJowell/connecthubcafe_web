@@ -1,0 +1,60 @@
+export const testimonials = [
+  {
+    id: 1,
+    customerName: 'Maria Santos',
+    productOrdered: 'Spanish Latte',
+    rating: 5,
+    message: "One of the best Spanish Lattes I've tried. The taste is rich and perfectly balanced.",
+    dateSubmitted: '2026-06-05',
+    photo: '/images/community1.jpg',
+  },
+  {
+    id: 2,
+    customerName: 'Joshua Reyes',
+    productOrdered: 'Caramel Frappe',
+    rating: 5,
+    message: 'The frappe was smooth, creamy, and not too sweet. Perfect after class.',
+    dateSubmitted: '2026-06-03',
+    photo: '/images/community2.jpg',
+  },
+  {
+    id: 3,
+    customerName: 'Andrea Lim',
+    productOrdered: 'Classic Milk Tea',
+    rating: 4,
+    message: 'Loved the pearls and the cozy place. It is now my favorite meetup spot.',
+    dateSubmitted: '2026-05-29',
+    photo: '/images/community3.jpg',
+  },
+  {
+    id: 4,
+    customerName: 'Kevin Dalisay',
+    productOrdered: 'Chocolate Chip Cookie',
+    rating: 5,
+    message: 'Fresh, soft, and loaded with chocolate. It paired so well with my coffee.',
+    dateSubmitted: '2026-05-22',
+    photo: '/images/community4.jpg',
+  },
+  {
+    id: 5,
+    customerName: 'Patricia Gomez',
+    productOrdered: 'Matcha Cream',
+    rating: 5,
+    message: 'The matcha flavor is clean and creamy. I also loved the calm cafe atmosphere.',
+    dateSubmitted: '2026-05-18',
+    photo: '/images/community5.jpg',
+  },
+  {
+    id: 6,
+    customerName: 'Miguel Tan',
+    productOrdered: 'Caramel Macchiato',
+    rating: 4,
+    message: 'Great balance of coffee and caramel. The staff were friendly and quick too.',
+    dateSubmitted: '2026-05-12',
+    photo: '/images/community6.jpg',
+  },
+]
+
+export const sortedTestimonials = [...testimonials].sort(
+  (a, b) => new Date(b.dateSubmitted) - new Date(a.dateSubmitted),
+)

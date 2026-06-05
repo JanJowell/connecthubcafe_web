@@ -1,8 +1,7 @@
-import { menuCategories, menuItems } from '../data/menuData'
-
-function scrollToSection(id) {
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-}
+import { useState } from 'react'
+import ProductModal from '../components/ProductModal'
+import { categories } from '../data/categories'
+import { products } from '../data/products'
 
 function ProductGrid({ title, id, items }) {
   return (
@@ -16,8 +15,10 @@ function ProductGrid({ title, id, items }) {
           <article className="product-card fade-in" key={item.id}>
             <img src={item.image} alt={item.name} />
             <div>
+              <span className="badge">{item.badge}</span>
               <h3>{item.name}</h3>
-              <p>{item.price}</p>
+              <p>{item.description}</p>
+              <strong>{item.price}</strong>
             </div>
           </article>
         ))}
@@ -27,33 +28,40 @@ function ProductGrid({ title, id, items }) {
 }
 
 function Menu() {
+  const [selectedCategory, setSelectedCategory] = useState(null)
+  const frappeItems = products.filter((product) => product.categoryId === 'frappes').slice(0, 6)
+  const drinkItems = products.filter((product) => ['coffee', 'non-coffee', 'milk-tea'].includes(product.categoryId)).slice(0, 6)
+  const pastrySnackItems = products.filter((product) => ['pastries', 'snacks'].includes(product.categoryId)).slice(0, 6)
+
   return (
     <section className="page-section menu-page">
       <div className="section-intro fade-in">
         <span className="eyebrow">Cafe menu</span>
         <h1>Fresh Sips & Baked Comforts</h1>
-        <p>Choose a category and jump into handcrafted favorites prepared for every kind of cafe day.</p>
+        <p>Choose a category and open a complete product list prepared for every kind of cafe day.</p>
         <p>"So whether you eat or drink, or whatever you do, do it all for the glory of God." - 1 Corinthians 10:31</p>
       </div>
 
-      <div className="category-grid">
-        {menuCategories.map((category) => (
+      <div className="category-grid menu-category-grid">
+        {categories.map((category) => (
           <button
             type="button"
             className="category-card fade-in"
             key={category.id}
-            onClick={() => scrollToSection(category.id)}
+            onClick={() => setSelectedCategory(category)}
           >
             <img src={category.image} alt="" />
-            <span>{category.title}</span>
+            <span>{category.name}</span>
             <p>{category.description}</p>
           </button>
         ))}
       </div>
 
-      <ProductGrid title="Frappes" id="frappes" items={menuItems.frappes} />
-      <ProductGrid title="Fruit Tea" id="fruit-tea" items={menuItems.fruitTea} />
-      <ProductGrid title="Cookies & Pastries" id="pastries" items={menuItems.pastries} />
+      <ProductGrid title="Frappes" id="frappes" items={frappeItems} />
+      <ProductGrid title="Coffee, Non-Coffee & Milk Tea" id="drinks" items={drinkItems} />
+      <ProductGrid title="Pastries & Snacks" id="pastries" items={pastrySnackItems} />
+
+      <ProductModal category={selectedCategory} onClose={() => setSelectedCategory(null)} />
     </section>
   )
 }
