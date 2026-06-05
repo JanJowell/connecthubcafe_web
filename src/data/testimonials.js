@@ -53,15 +53,6 @@ export const testimonials = [
     dateSubmitted: '2026-05-12',
     photo: '/testimonies-pfp/test6.png',
   },
-  {
-    id: 7,
-    customerName: 'Janelle Cruz',
-    productOrdered: 'Iced Coffee',
-    rating: 5,
-    message: 'The place feels welcoming and the drinks are consistently good. I would visit again.',
-    dateSubmitted: '2026-06-05',
-    photo: '/testimonies-pfp/test7.jpg',
-  },
 ]
 
 export const sortedTestimonials = [...testimonials].sort(
