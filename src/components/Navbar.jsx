@@ -46,7 +46,7 @@ function Navbar() {
       <div className={`drawer-backdrop ${isOpen ? 'is-open' : ''}`} onClick={closeDrawer} />
       <aside className={`mobile-drawer ${isOpen ? 'is-open' : ''}`} aria-hidden={!isOpen}>
         <div className="drawer-header">
-          <span className="brand">Connecthub Cafe</span>
+          <span className="brand">Connecthub Cafes</span>
           <button type="button" className="icon-button" onClick={closeDrawer} aria-label="Close navigation menu">
             <X size={22} />
           </button>
